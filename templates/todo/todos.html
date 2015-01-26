@@ -1,9 +1,9 @@
 <h2>Todo and server</h2>
 <div>
-    <span>{{remaining()}} of {{todos.length}} remaining</span>
+    <span>{{remaining()}} of {{getTodos().length}} remaining</span>
     [ <a href="" ng-click="archive()">archive</a> ]
     <ul class="unstyled">
-        <li ng-repeat="todo in todos">
+        <li ng-repeat="todo in getTodos()">
             <input type="checkbox" ng-model="todo.done">
             <span class="done-{{todo.done}}">{{todo.text}}</span>
         </li>
