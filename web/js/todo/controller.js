@@ -1,5 +1,6 @@
 angular.module('todo.controller', [
-    'todo.model'
+    'todo.model',
+    'todo.ui'
 ])
     .controller('TodosController', function($scope, todos) {
         $scope.getTodos = todos.getTodos;

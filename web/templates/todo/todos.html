@@ -3,9 +3,8 @@
     <span>{{remaining()}} of {{getTodos().length}} remaining</span>
     [ <a href="" ng-click="archive()">archive</a> ]
     <ul class="unstyled">
-        <li ng-repeat="todo in getTodos()">
-            <input type="checkbox" ng-model="todo.done">
-            <span class="done-{{todo.done}}">{{todo.text}}</span>
+        <li ng-repeat="item in getTodos()">
+            <todo-item todo="item"></todo-item>
         </li>
     </ul>
     <form ng-submit="addTodo()">
